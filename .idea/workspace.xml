@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="My working on seminar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/Task1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/note.txt" afterDir="false" />
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="Solved first task from homeWork #1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/Task3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,26 +43,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Homework1.Task1">
+  <component name="RunManager" selected="Application.Task3">
     <configuration name="Homework1.Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Homework1.Task1" />
       <module name="ExceptionsSeminars" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Homework1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Task0" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Seminar1.Task0" />
-      <module name="ExceptionsSeminars" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Seminar1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +83,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework1.Task3" />
+      <module name="ExceptionsSeminars" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Task4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Seminar1.Task4" />
       <module name="ExceptionsSeminars" />
@@ -112,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Task3" />
         <item itemvalue="Application.Homework1.Task1" />
         <item itemvalue="Application.Task4" />
         <item itemvalue="Application.Task2" />
         <item itemvalue="Application.Task1" />
-        <item itemvalue="Application.Task0" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669799019355</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Solved first task from homeWork #1">
+      <created>1669823875181</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669823875181</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My working on seminar" />
-    <option name="LAST_COMMIT_MESSAGE" value="My working on seminar" />
+    <MESSAGE value="Solved first task from homeWork #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved first task from homeWork #1" />
   </component>
 </project>
