@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task4.java" afterDir="false" />
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="My working on seminar">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/Task1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Homework1/note.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -39,13 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Task4">
+}</component>
+  <component name="RunManager" selected="Application.Homework1.Task1">
+    <configuration name="Homework1.Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework1.Task1" />
+      <module name="ExceptionsSeminars" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Task0" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Seminar1.Task0" />
       <module name="ExceptionsSeminars" />
@@ -100,6 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Homework1.Task1" />
         <item itemvalue="Application.Task4" />
         <item itemvalue="Application.Task2" />
         <item itemvalue="Application.Task1" />
@@ -116,6 +129,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669788625441</updated>
     </task>
+    <task id="LOCAL-00001" summary="My working on seminar">
+      <created>1669799019355</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669799019355</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,5 +149,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="My working on seminar" />
+    <option name="LAST_COMMIT_MESSAGE" value="My working on seminar" />
   </component>
 </project>
