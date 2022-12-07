@@ -3,11 +3,14 @@
  */
 package DiplomaProject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Data {
 
     private String fullString;
+    private final ArrayList<String> parsedString = new ArrayList<>();
     private static final int NUMBER = 6;
     private String surname;
     private String name;
@@ -72,6 +75,7 @@ public class Data {
 
     /**
      * This method receive result of checking of user's string and inform user about made mistakes
+     * If user inserted correct number of words there is calling setter for parsedString
      * @param resultOfChecking
      */
     public void explainingError(int resultOfChecking) {
@@ -83,19 +87,15 @@ public class Data {
         }
         if(resultOfChecking == 0) {
             System.out.println("All is fine");
+            setParsedString();
         }
     }
 
-    /**
-     * This method set values in the rest fields of class Data
-     */
-    public void stringProcessing() {
-        String[] resultOfParsing = this.fullString.split(" ");
-        this.surname = resultOfParsing[0];
-        this.name = resultOfParsing[1];
-        this.middleName = resultOfParsing[2];
-        this.dateOfBirth = resultOfParsing[3];
-        this.phoneNumber = Integer.parseInt(resultOfParsing[4]);
-        this.sex = resultOfParsing[5].charAt(0);
+    private void setParsedString() {
+        this.parsedString.addAll(Arrays.asList(this.fullString.split(" ")));
+    }
+
+    public ArrayList<String> getParsedString() {
+        return parsedString;
     }
 }
