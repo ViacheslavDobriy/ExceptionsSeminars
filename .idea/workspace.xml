@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="Added method for parsing user's string and setting values in fields of class Data.&#10;There is output to the console in the main">
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="Put ArrayList&lt;String&gt; instead of String[] for making analyse easier.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
     </list>
@@ -170,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670431654904</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Put ArrayList&lt;String&gt; instead of String[] for making analyse easier.">
+      <created>1670432646932</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670432646932</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +199,7 @@
     <MESSAGE value="Started project. Program is able to determine number of words which was inserted by user and inform user in console about incorrect put data." />
     <MESSAGE value="Added documentation" />
     <MESSAGE value="Added method for parsing user's string and setting values in fields of class Data.&#10;There is output to the console in the main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method for parsing user's string and setting values in fields of class Data.&#10;There is output to the console in the main" />
+    <MESSAGE value="Put ArrayList&lt;String&gt; instead of String[] for making analyse easier." />
+    <option name="LAST_COMMIT_MESSAGE" value="Put ArrayList&lt;String&gt; instead of String[] for making analyse easier." />
   </component>
 </project>

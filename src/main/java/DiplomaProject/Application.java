@@ -22,6 +22,7 @@
 Не забудьте закрыть соединение с файлом.
 При возникновении проблемы с чтением-записью в файл, исключение должно быть корректно обработано,
 пользователь должен увидеть стектрейс ошибки.
+Dobrov Slava Olegovich 27.10.1995 94454781 m
  */
 package DiplomaProject;
 
@@ -30,6 +31,7 @@ public class Application {
         Data newData = new Data();
         newData.setFullString();
         newData.explainingError(newData.checkNumberOfWords());
+        System.out.println(newData.getSex());
         for (String str: newData.getParsedString()) {
             System.out.println(str);
         }

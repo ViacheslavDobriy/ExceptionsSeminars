@@ -17,7 +17,7 @@ public class Data {
     private String middleName;
     private String dateOfBirth;
     private int phoneNumber;
-    private char sex;
+    private String sex;
 
     public Data() {
         System.out.println("New data was created...");
@@ -52,7 +52,7 @@ public class Data {
         return phoneNumber;
     }
 
-    public char getSex() {
+    public String getSex() {
         return sex;
     }
 
@@ -87,15 +87,31 @@ public class Data {
         }
         if(resultOfChecking == 0) {
             System.out.println("All is fine");
-            setParsedString();
+            setRestFields();
         }
     }
 
-    private void setParsedString() {
+    private void setRestFields() {
         this.parsedString.addAll(Arrays.asList(this.fullString.split(" ")));
+        setSex();
     }
 
     public ArrayList<String> getParsedString() {
         return parsedString;
+    }
+
+    /**
+     * This method extract sex from string if there is in the ArrayList
+     * TODO: throw exception if both if was ignored
+     */
+    private void setSex() {
+        if (this.parsedString.contains("m")) {
+            this.sex = "m";
+            this.parsedString.remove("m");
+        }
+        if (this.parsedString.contains("f")) {
+            this.sex = "f";
+            this.parsedString.remove("f");
+        }
     }
 }
