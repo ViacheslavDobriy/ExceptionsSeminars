@@ -95,6 +95,7 @@ public class Data {
         this.parsedString.addAll(Arrays.asList(this.fullString.split(" ")));
         setSex();
         setPhoneNumber();
+        setDateOfBirth();
     }
 
     public ArrayList<String> getParsedString() {
@@ -132,7 +133,29 @@ public class Data {
         this.parsedString.remove(Integer.toString(this.phoneNumber));
     }
 
-    public void setDateOfBirth() {
+    /**
+     * This method extract legal date of birth and
+     * assign gotten string to dateOfBirth field of class Data
+     * TODO: throw exceptions if dateOfBirth wasn't found or incorrect
+     */
+    private void setDateOfBirth() {
+        String[] checkDate;
+        for (String isDateOfBirth: this.parsedString) {
+            try {
+                checkDate = isDateOfBirth.split("\\.");
+                if (checkDate.length == 3 ) {
+                    if(Integer.parseInt(checkDate[0]) > 0 && Integer.parseInt(checkDate[0]) < 32) {
+                        if(Integer.parseInt(checkDate[1]) > 0 && Integer.parseInt(checkDate[1]) < 13) {
+                            if(Integer.parseInt(checkDate[2]) > 0 && Integer.parseInt(checkDate[2]) < 2023) {
+                                this.dateOfBirth = isDateOfBirth;
+                            }
+                        }
+                    }
+                }
+            } catch (Exception ignored) {
 
+            }
+        }
+        this.parsedString.remove(this.dateOfBirth);
     }
 }

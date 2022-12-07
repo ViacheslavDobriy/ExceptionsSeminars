@@ -31,6 +31,7 @@ public class Application {
         Data newData = new Data();
         newData.setFullString();
         newData.explainingError(newData.checkNumberOfWords());
+        System.out.println(newData.getDateOfBirth());
         System.out.println(newData.getPhoneNumber());
         System.out.println(newData.getSex());
         for (String str: newData.getParsedString()) {
