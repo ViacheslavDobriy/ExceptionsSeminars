@@ -94,6 +94,7 @@ public class Data {
     private void setRestFields() {
         this.parsedString.addAll(Arrays.asList(this.fullString.split(" ")));
         setSex();
+        setPhoneNumber();
     }
 
     public ArrayList<String> getParsedString() {
@@ -102,7 +103,7 @@ public class Data {
 
     /**
      * This method extract sex from string if there is in the ArrayList
-     * TODO: throw exception if both if was ignored
+     * TODO: throw exception if both condition was ignored
      */
     private void setSex() {
         if (this.parsedString.contains("m")) {
@@ -113,5 +114,25 @@ public class Data {
             this.sex = "f";
             this.parsedString.remove("f");
         }
+    }
+
+    /**
+     * This method extract phoneNumber by trying parseInt(elemOfArrayList)
+     * and assign to PhoneNumber field of class Data
+     * TODO: throw exception if phoneNumber wasn't detected
+     */
+    private void setPhoneNumber() {
+        for (String strToInt: this.parsedString) {
+            try {
+                this.phoneNumber = Integer.parseInt(strToInt);
+            } catch (Exception ignored) {
+
+            }
+        }
+        this.parsedString.remove(Integer.toString(this.phoneNumber));
+    }
+
+    public void setDateOfBirth() {
+
     }
 }
