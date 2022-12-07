@@ -29,6 +29,30 @@ public class Data {
         this.fullString = newScanner.nextLine();
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
     /**
      * Method checkNumberOfWords return:
      * -1 if there are too many data in inserted string
@@ -60,5 +84,18 @@ public class Data {
         if(resultOfChecking == 0) {
             System.out.println("All is fine");
         }
+    }
+
+    /**
+     * This method set values in the rest fields of class Data
+     */
+    public void stringProcessing() {
+        String[] resultOfParsing = this.fullString.split(" ");
+        this.surname = resultOfParsing[0];
+        this.name = resultOfParsing[1];
+        this.middleName = resultOfParsing[2];
+        this.dateOfBirth = resultOfParsing[3];
+        this.phoneNumber = Integer.parseInt(resultOfParsing[4]);
+        this.sex = resultOfParsing[5].charAt(0);
     }
 }
