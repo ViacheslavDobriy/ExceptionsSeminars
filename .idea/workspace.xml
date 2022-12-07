@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="My work on third seminar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Seminar1/Task8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,13 +44,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Task8">
-    <configuration name="Seminar1.Task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Seminar1.Task3" />
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DiplomaProject.Application" />
       <module name="ExceptionsSeminars" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Seminar1.*" />
+          <option name="PATTERN" value="DiplomaProject.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -59,12 +58,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Seminar3.task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Seminar3.task3" />
+    <configuration name="Seminar1.Task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Seminar1.Task3" />
       <module name="ExceptionsSeminars" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Seminar3.*" />
+          <option name="PATTERN" value="Seminar1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.Task8" />
         <item itemvalue="Application.Task7" />
         <item itemvalue="Application.Seminar1.Task3" />
         <item itemvalue="Application.Task4" />
-        <item itemvalue="Application.Seminar3.task3" />
       </list>
     </recent_temporary>
   </component>
