@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/PopularManName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/PopularWomenName.java" afterDir="false" />
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
@@ -202,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670437578323</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names">
+      <created>1670441890686</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670441890686</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +232,7 @@
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract sex from inserted data." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract phoneNumber from inserted data." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
+    <MESSAGE value="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names" />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names" />
   </component>
 </project>

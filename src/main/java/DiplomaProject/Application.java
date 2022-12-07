@@ -22,7 +22,14 @@
 Не забудьте закрыть соединение с файлом.
 При возникновении проблемы с чтением-записью в файл, исключение должно быть корректно обработано,
 пользователь должен увидеть стектрейс ошибки.
-Dobrov Kirill Olegovich 27.10.1995 94454781 m
+Dobrova Alina Olegovna 27.10.1995 94454781 f - строка для быстрого теста
+TODO: 1) Предположить и пробросить все возможные исключения в классе Data, смотри TODO
+TODO: 2) Добавить работу с файлами, если все данные успешно распарсились
+TODO: 3) Пробросить возможные Exceptions при работе с файлами
+TODO: 4) Сделать свои классы Exceptions, унаследовать их и применить
+TODO: 5) Протестировать приложение на множестве разных входных данных
+TODO: 6) Переопределить метод toString для класса Data для удобного вывода данных в консоль
+TODO: 7) Интерфейсы?
  */
 package DiplomaProject;
 
@@ -31,10 +38,12 @@ public class Application {
         Data newData = new Data();
         newData.setFullString();
         newData.explainingError(newData.checkNumberOfWords());
+        System.out.println(newData.getMiddleName());
         System.out.println(newData.getName());
         System.out.println(newData.getDateOfBirth());
         System.out.println(newData.getPhoneNumber());
         System.out.println(newData.getSex());
+        System.out.println(newData.getSurname());
         for (String str: newData.getParsedString()) {
             System.out.println(str);
         }

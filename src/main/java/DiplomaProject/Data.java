@@ -76,6 +76,7 @@ public class Data {
     /**
      * This method receive result of checking of user's string and inform user about made mistakes
      * If user inserted correct number of words there is calling setter for parsedString
+     * TODO: Could resultOfChecking be 'null'? Maybe throw exception
      * @param resultOfChecking
      */
     public void explainingError(int resultOfChecking) {
@@ -96,7 +97,9 @@ public class Data {
         setSex();
         setPhoneNumber();
         setDateOfBirth();
+        setMiddleName();
         setName();
+        setSurname();
     }
 
     public ArrayList<String> getParsedString() {
@@ -187,5 +190,34 @@ public class Data {
             }
             this.parsedString.remove(this.name);
         }
+    }
+
+    /**
+     * This method extract middle name from ArrayList relying on the logic that:
+     * women have 'vna' at the end of middle name
+     * men have 'ich' at the of middle name
+     * TODO: throw exception if middle name wasn't found
+     */
+    private void setMiddleName() {
+        String[] checkMiddleName;
+        for (String isMiddleName: this.parsedString) {
+            checkMiddleName = isMiddleName.split("");
+            if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equals("a") && checkMiddleName[checkMiddleName.length-2].equals("n") && checkMiddleName[checkMiddleName.length-3].equals("v")) {
+                this.middleName = isMiddleName;
+            }
+            if(this.sex.equals("m") && checkMiddleName[checkMiddleName.length-1].equals("h") && checkMiddleName[checkMiddleName.length-2].equals("c") && checkMiddleName[checkMiddleName.length-3].equals("i")) {
+                this.middleName = isMiddleName;
+            }
+        }
+        this.parsedString.remove(this.middleName);
+    }
+
+    /**
+     * This is the last method for extracting, that's why program just assign
+     * the last elem of ArrayList to field surname
+     * TODO: many tests with different input data to check the operation of the application
+     */
+    private void setSurname() {
+        this.surname = this.parsedString.remove(0);
     }
 }
