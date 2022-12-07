@@ -96,6 +96,7 @@ public class Data {
         setSex();
         setPhoneNumber();
         setDateOfBirth();
+        setName();
     }
 
     public ArrayList<String> getParsedString() {
@@ -157,5 +158,34 @@ public class Data {
             }
         }
         this.parsedString.remove(this.dateOfBirth);
+    }
+
+    /**
+     * This method compare string with two enums of names.
+     * There are enum for male names and for female names
+     * Depends on sex program compare with corresponding enum
+     * TODO: throw exception if name wasn't found
+     */
+    private void setName() {
+        if (this.sex.equals("m")) {
+            for (String isName : this.parsedString) {
+                for (int i = 0; i < PopularManName.values().length; i++) {
+                    if (isName.equals(PopularManName.values()[i].getName())) {
+                        this.name = isName;
+                    }
+                }
+            }
+            this.parsedString.remove(this.name);
+        }
+        if (this.sex.equals("f")) {
+            for (String isName : this.parsedString) {
+                for (int i = 0; i < PopularWomenName.values().length; i++) {
+                    if (isName.equals(PopularWomenName.values()[i].getName())) {
+                        this.name = isName;
+                    }
+                }
+            }
+            this.parsedString.remove(this.name);
+        }
     }
 }

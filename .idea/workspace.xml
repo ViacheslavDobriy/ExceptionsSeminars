@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is processed for extract phoneNumber from inserted data.">
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/PopularManName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/PopularWomenName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
     </list>
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -43,8 +47,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.DiplomaProject.Application">
+    <configuration name="DiplomaProject.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DiplomaProject.Application" />
       <module name="ExceptionsSeminars" />
       <extension name="coverage">
@@ -111,7 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.DiplomaProject.Application" />
         <item itemvalue="Application.Task8" />
         <item itemvalue="Application.Task7" />
         <item itemvalue="Application.Seminar1.Task3" />
@@ -191,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670436270722</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data.">
+      <created>1670437578322</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670437578323</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +226,7 @@
     <MESSAGE value="Put ArrayList&lt;String&gt; instead of String[] for making analyse easier." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract sex from inserted data." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract phoneNumber from inserted data." />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is processed for extract phoneNumber from inserted data." />
+    <MESSAGE value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
+    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
   </component>
 </project>
