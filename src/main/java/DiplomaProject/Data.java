@@ -1,5 +1,6 @@
 /*
     Этот класс служит для обработки данных
+
  */
 package DiplomaProject;
 
@@ -30,6 +31,10 @@ public class Data {
         Scanner newScanner = new Scanner(System.in);
         System.out.println("Insert information about person");
         this.fullString = newScanner.nextLine();
+        if(this.fullString.equals("")) {
+            System.out.println("You entered nothing");
+            setFullString();
+        }
     }
 
     public String getSurname() {
@@ -61,7 +66,7 @@ public class Data {
      * -1 if there are too many data in inserted string
      * -2 if there aren't enough data
      * 0 if user inserted correct number of data
-     * @return
+     * @return - this integer will be used in checkOfNumber() method
      */
     public int checkNumberOfWords() {
         if(this.fullString.split(" ").length > NUMBER) {
@@ -76,74 +81,80 @@ public class Data {
     /**
      * This method receive result of checking of user's string and inform user about made mistakes
      * If user inserted correct number of words there is calling setter for parsedString
-     * TODO: Could resultOfChecking be 'null'? Maybe throw exception
-     * @param resultOfChecking
+     * @param resultOfChecking - can't be null, so exception will be extra in this case
      */
     public void explainingError(int resultOfChecking) {
         if(resultOfChecking == -1) {
-            System.out.println("User insert too many words");
+            throw new LengthOfStringException("User insert too many words");
         }
         if(resultOfChecking == -2) {
-            System.out.println("User insert too few words");
+            throw new LengthOfStringException("User insert too few words");
         }
         if(resultOfChecking == 0) {
-            System.out.println("All is fine");
             setRestFields();
         }
     }
 
+    /**
+     * This method set values for all fields of Data class in case if there isn't thrown exception
+     */
     private void setRestFields() {
         this.parsedString.addAll(Arrays.asList(this.fullString.split(" ")));
-        setSex();
-        setPhoneNumber();
-        setDateOfBirth();
-        setMiddleName();
-        setName();
-        setSurname();
-    }
-
-    public ArrayList<String> getParsedString() {
-        return parsedString;
+        try {
+            setSex();
+            setPhoneNumber();
+            setDateOfBirth();
+            setMiddleName();
+            setName();
+            setSurname();
+        } catch (FieldWasNotFoundException e) {
+            System.out.println(e.getMessage());
+            launchButton();
+        }
     }
 
     /**
      * This method extract sex from string if there is in the ArrayList
-     * TODO: throw exception if both condition was ignored
      */
     private void setSex() {
-        if (this.parsedString.contains("m")) {
+        if (this.parsedString.contains("m") || this.parsedString.contains("M")) {
             this.sex = "m";
             this.parsedString.remove("m");
+            this.parsedString.remove("M");
         }
-        if (this.parsedString.contains("f")) {
+        if (this.parsedString.contains("f") || this.parsedString.contains("F")) {
             this.sex = "f";
             this.parsedString.remove("f");
+            this.parsedString.remove("F");
+        }
+        if (this.sex == null) {
+            throw new FieldWasNotFoundException("Field sex wasn't found in inserted string" + "\n" + "Try again!");
         }
     }
 
     /**
      * This method extract phoneNumber by trying parseInt(elemOfArrayList)
      * and assign to PhoneNumber field of class Data
-     * TODO: throw exception if phoneNumber wasn't detected
      */
     private void setPhoneNumber() {
         for (String strToInt: this.parsedString) {
             try {
                 this.phoneNumber = Integer.parseInt(strToInt);
-            } catch (Exception ignored) {
-
+            } catch (NumberFormatException ignored) {
             }
         }
-        this.parsedString.remove(Integer.toString(this.phoneNumber));
+        if (this.phoneNumber == 0) {
+            throw new FieldWasNotFoundException("Field phone number wasn't found in inserted string" + "\n" + "Try again!");
+        } else this.parsedString.remove(Integer.toString(this.phoneNumber));
     }
 
     /**
      * This method extract legal date of birth and
      * assign gotten string to dateOfBirth field of class Data
-     * TODO: throw exceptions if dateOfBirth wasn't found or incorrect
      */
     private void setDateOfBirth() {
         String[] checkDate;
+        String whereIsMistake = "";
         for (String isDateOfBirth: this.parsedString) {
             try {
                 checkDate = isDateOfBirth.split("\\.");
@@ -152,22 +163,22 @@ public class Data {
                         if(Integer.parseInt(checkDate[1]) > 0 && Integer.parseInt(checkDate[1]) < 13) {
                             if(Integer.parseInt(checkDate[2]) > 0 && Integer.parseInt(checkDate[2]) < 2023) {
                                 this.dateOfBirth = isDateOfBirth;
-                            }
-                        }
-                    }
-                }
-            } catch (Exception ignored) {
-
+                            } else whereIsMistake = "wrong value of year of birth - 'yyyy'";
+                        } else whereIsMistake = "Wrong value of month of birth - 'mm'";
+                    } else whereIsMistake = "Wrong value of birthday - 'dd'";
+                } else whereIsMistake = "String wasn't found satisfying condition dd.mm.yyyy";
+            } catch (NumberFormatException ignored) {
             }
         }
-        this.parsedString.remove(this.dateOfBirth);
+        if(this.dateOfBirth == null) {
+            throw new FieldWasNotFoundException(whereIsMistake + "\n" + "Try again!");
+        } else this.parsedString.remove(this.dateOfBirth);
     }
 
     /**
      * This method compare string with two enums of names.
      * There are enum for male names and for female names
      * Depends on sex program compare with corresponding enum
-     * TODO: throw exception if name wasn't found
      */
     private void setName() {
         if (this.sex.equals("m")) {
@@ -178,7 +189,6 @@ public class Data {
                     }
                 }
             }
-            this.parsedString.remove(this.name);
         }
         if (this.sex.equals("f")) {
             for (String isName : this.parsedString) {
@@ -188,15 +198,17 @@ public class Data {
                     }
                 }
             }
-            this.parsedString.remove(this.name);
         }
+        if (this.name == null) {
+            throw new FieldWasNotFoundException("Field name wasn't detected in inserted string" + "\n" + "Try again!");
+        } else this.parsedString.remove(this.name);
     }
 
     /**
      * This method extract middle name from ArrayList relying on the logic that:
      * women have 'vna' at the end of middle name
      * men have 'ich' at the of middle name
-     * TODO: throw exception if middle name wasn't found
+     * TODO: put for comparing 'Il'inichna'
      */
     private void setMiddleName() {
         String[] checkMiddleName;
@@ -209,7 +221,9 @@ public class Data {
                 this.middleName = isMiddleName;
             }
         }
-        this.parsedString.remove(this.middleName);
+        if (this.middleName == null) {
+            throw new FieldWasNotFoundException("Field middle name wasn't detected in inserted string" + "\n" + "Try again!");
+        } else this.parsedString.remove(this.middleName);
     }
 
     /**
@@ -219,5 +233,30 @@ public class Data {
      */
     private void setSurname() {
         this.surname = this.parsedString.remove(0);
+    }
+
+    /**
+     * This method is a button for launching application
+     * TODO: delete output is the console.
+     */
+    public void launchButton() {
+        setFullString();
+        explainingError(checkNumberOfWords());
+//        System.out.printf(" this is your middle name - %s\n",this.middleName);
+//        System.out.printf(" this is your name - %s\n",this.name);
+//        System.out.printf(" this is your date of birth - %s\n",this.dateOfBirth);
+//        System.out.printf(" this is your phone number - %d\n",this.phoneNumber);
+//        System.out.printf(" this is your sex - %s\n",this.sex);
+//        System.out.printf(" this is your surname - %s",this.surname);
+    }
+
+    @Override
+    public String toString() {
+        return  "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", sex='" + sex + '\'';
     }
 }
