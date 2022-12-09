@@ -1,6 +1,5 @@
 /*
     Этот класс служит для обработки данных
-
  */
 package DiplomaProject;
 
@@ -151,6 +150,7 @@ public class Data {
     /**
      * This method extract legal date of birth and
      * assign gotten string to dateOfBirth field of class Data
+     * @whereIsMistake has a message for FieldWasNotFoundException class.
      */
     private void setDateOfBirth() {
         String[] checkDate;
@@ -184,8 +184,8 @@ public class Data {
         if (this.sex.equals("m")) {
             for (String isName : this.parsedString) {
                 for (int i = 0; i < PopularManName.values().length; i++) {
-                    if (isName.equals(PopularManName.values()[i].getName())) {
-                        this.name = isName;
+                    if (isName.equalsIgnoreCase(PopularManName.values()[i].getName())) {
+                        this.name = PopularManName.values()[i].getName();
                     }
                 }
             }
@@ -193,8 +193,8 @@ public class Data {
         if (this.sex.equals("f")) {
             for (String isName : this.parsedString) {
                 for (int i = 0; i < PopularWomenName.values().length; i++) {
-                    if (isName.equals(PopularWomenName.values()[i].getName())) {
-                        this.name = isName;
+                    if (isName.equalsIgnoreCase(PopularWomenName.values()[i].getName())) {
+                        this.name = PopularWomenName.values()[i].getName();
                     }
                 }
             }
@@ -206,18 +206,21 @@ public class Data {
 
     /**
      * This method extract middle name from ArrayList relying on the logic that:
-     * women have 'vna' at the end of middle name
+     * women have 'vna' at the end of middle name AND 'hna' if middle name is 'Ili'inichna'
      * men have 'ich' at the of middle name
-     * TODO: put for comparing 'Il'inichna'
      */
     private void setMiddleName() {
         String[] checkMiddleName;
         for (String isMiddleName: this.parsedString) {
             checkMiddleName = isMiddleName.split("");
-            if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equals("a") && checkMiddleName[checkMiddleName.length-2].equals("n") && checkMiddleName[checkMiddleName.length-3].equals("v")) {
+            if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("a") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("n") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("v")) {
+//                isMiddleName.toLowerCase()
+                this.middleName = isMiddleName.toLowerCase().toUpperCase();
+            }
+            if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("a") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("n") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("h")) {
                 this.middleName = isMiddleName;
             }
-            if(this.sex.equals("m") && checkMiddleName[checkMiddleName.length-1].equals("h") && checkMiddleName[checkMiddleName.length-2].equals("c") && checkMiddleName[checkMiddleName.length-3].equals("i")) {
+            if(this.sex.equals("m") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("h") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("c") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("i")) {
                 this.middleName = isMiddleName;
             }
         }
@@ -229,7 +232,6 @@ public class Data {
     /**
      * This is the last method for extracting, that's why program just assign
      * the last elem of ArrayList to field surname
-     * TODO: many tests with different input data to check the operation of the application
      */
     private void setSurname() {
         this.surname = this.parsedString.remove(0);
@@ -237,17 +239,10 @@ public class Data {
 
     /**
      * This method is a button for launching application
-     * TODO: delete output is the console.
      */
     public void launchButton() {
         setFullString();
         explainingError(checkNumberOfWords());
-//        System.out.printf(" this is your middle name - %s\n",this.middleName);
-//        System.out.printf(" this is your name - %s\n",this.name);
-//        System.out.printf(" this is your date of birth - %s\n",this.dateOfBirth);
-//        System.out.printf(" this is your phone number - %d\n",this.phoneNumber);
-//        System.out.printf(" this is your sex - %s\n",this.sex);
-//        System.out.printf(" this is your surname - %s",this.surname);
     }
 
     @Override

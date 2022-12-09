@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/FieldWasNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/LengthOfStringException.java" afterDir="false" />
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="The most exceptions were processed. &#10;Need work on lowercase for each string field.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
@@ -216,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670444379738</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="The most exceptions were processed. &#10;Need work on lowercase for each string field.">
+      <created>1670524439849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670524439849</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +248,7 @@
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names" />
     <MESSAGE value="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written" />
+    <MESSAGE value="The most exceptions were processed. &#10;Need work on lowercase for each string field." />
+    <option name="LAST_COMMIT_MESSAGE" value="The most exceptions were processed. &#10;Need work on lowercase for each string field." />
   </component>
 </project>
