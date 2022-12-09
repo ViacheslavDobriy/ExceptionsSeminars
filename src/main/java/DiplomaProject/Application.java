@@ -24,11 +24,11 @@
 пользователь должен увидеть стектрейс ошибки.
 Dobrova Alina Olegovna 27.10.1995 94454781 f - строка для быстрого теста
 TODO: 1) Предположить и пробросить все возможные исключения в классе Data, смотри TODO
-TODO: 2) Добавить работу с файлами, если все данные успешно распарсились
 TODO: 3) Пробросить возможные Exceptions при работе с файлами
 TODO: 4) Сделать свои классы Exceptions, унаследовать их от уже известных и применить
 TODO: 5) Протестировать приложение на множестве разных входных данных
 TODO: 6) Интерфейсы?
+TODO: 7) Создать отдельный класс для проверки данных, а то класс Data слишком большой получается
  */
 package DiplomaProject;
 
@@ -37,5 +37,6 @@ public class Application {
         Data newData = new Data();
         newData.launchButton();
         System.out.println(newData);
+        WriterToFile newWriter = new WriterToFile(newData);
     }
 }
