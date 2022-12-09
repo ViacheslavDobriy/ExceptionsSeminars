@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/FieldWasNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/LengthOfStringException.java" afterDir="false" />
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="Added work with file&#10;TODO 2 is closed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/SavedData/Dobrova.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/WriterToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/WriterToFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +46,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DiplomaProject.Application">
-    <configuration name="DiplomaProject.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DiplomaProject.Application" />
       <module name="ExceptionsSeminars" />
       <extension name="coverage">
@@ -115,7 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DiplomaProject.Application" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.Task8" />
         <item itemvalue="Application.Task7" />
         <item itemvalue="Application.Seminar1.Task3" />
@@ -216,7 +215,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670444379738</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="The most exceptions were processed. &#10;Need work on lowercase for each string field.">
+      <created>1670524439849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670524439849</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Put checking for some lowerCases">
+      <created>1670561575373</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670561575373</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Done with many cases of lower- and upper-Cases Completely.&#10;TODO 7 is closed">
+      <created>1670570422703</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670570422703</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added work with file&#10;TODO 2 is closed">
+      <created>1670571863052</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670571863052</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +270,10 @@
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract date of birth from inserted data." />
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names" />
     <MESSAGE value="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written" />
-    <option name="LAST_COMMIT_MESSAGE" value="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written" />
+    <MESSAGE value="The most exceptions were processed. &#10;Need work on lowercase for each string field." />
+    <MESSAGE value="Put checking for some lowerCases" />
+    <MESSAGE value="Done with many cases of lower- and upper-Cases Completely.&#10;TODO 7 is closed" />
+    <MESSAGE value="Added work with file&#10;TODO 2 is closed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added work with file&#10;TODO 2 is closed" />
   </component>
 </project>
