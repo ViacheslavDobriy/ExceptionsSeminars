@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="The most exceptions were processed. &#10;Need work on lowercase for each string field.">
+    <list default="true" id="f2bc3921-4a65-465b-adff-efe722e67ddb" name="Changes" comment="Put checking for some lowerCases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiplomaProject/Data.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670524439849</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Put checking for some lowerCases">
+      <created>1670561575373</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670561575373</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +255,7 @@
     <MESSAGE value="ArrayList&lt;String&gt; is processed for extract name from inserted data.&#10;Created two enums for names - for male and female names" />
     <MESSAGE value="ArrayList&lt;String&gt; is completely processed. User can enter data in random order. &#10;There are many cases which should be processed. There are many exceptions should be thrown.&#10;Documentation is written" />
     <MESSAGE value="The most exceptions were processed. &#10;Need work on lowercase for each string field." />
-    <option name="LAST_COMMIT_MESSAGE" value="The most exceptions were processed. &#10;Need work on lowercase for each string field." />
+    <MESSAGE value="Put checking for some lowerCases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put checking for some lowerCases" />
   </component>
 </project>

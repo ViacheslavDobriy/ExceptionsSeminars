@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Data {
-
     private String fullString;
     private final ArrayList<String> parsedString = new ArrayList<>();
     private static final int NUMBER = 6;
@@ -214,14 +213,13 @@ public class Data {
         for (String isMiddleName: this.parsedString) {
             checkMiddleName = isMiddleName.split("");
             if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("a") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("n") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("v")) {
-//                isMiddleName.toLowerCase()
-                this.middleName = isMiddleName.toLowerCase().toUpperCase();
+                this.middleName = checkMiddleName[0].toUpperCase() + isMiddleName.substring(1).toLowerCase();
             }
             if(this.sex.equals("f") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("a") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("n") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("h")) {
-                this.middleName = isMiddleName;
+                this.middleName = checkMiddleName[0].toUpperCase() + isMiddleName.substring(1).toLowerCase();
             }
             if(this.sex.equals("m") && checkMiddleName[checkMiddleName.length-1].equalsIgnoreCase("h") && checkMiddleName[checkMiddleName.length-2].equalsIgnoreCase("c") && checkMiddleName[checkMiddleName.length-3].equalsIgnoreCase("i")) {
-                this.middleName = isMiddleName;
+                this.middleName = checkMiddleName[0].toUpperCase() + isMiddleName.substring(1).toLowerCase();
             }
         }
         if (this.middleName == null) {
@@ -234,7 +232,8 @@ public class Data {
      * the last elem of ArrayList to field surname
      */
     private void setSurname() {
-        this.surname = this.parsedString.remove(0);
+        String temp = this.parsedString.remove(0);
+        this.surname = temp.substring(0,1).toUpperCase() + temp.substring(1).toLowerCase();
     }
 
     /**
