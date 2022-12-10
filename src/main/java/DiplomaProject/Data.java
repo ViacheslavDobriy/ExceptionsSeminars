@@ -158,13 +158,13 @@ public class Data {
             try {
                 checkDate = isDateOfBirth.split("\\.");
                 if (checkDate.length == 3 ) {
-                    if(Integer.parseInt(checkDate[0]) > 0 && Integer.parseInt(checkDate[0]) < 32) {
-                        if(Integer.parseInt(checkDate[1]) > 0 && Integer.parseInt(checkDate[1]) < 13) {
-                            if(Integer.parseInt(checkDate[2]) > 0 && Integer.parseInt(checkDate[2]) < 2023) {
+                    if(Integer.parseInt(checkDate[0]) > 0 && Integer.parseInt(checkDate[0]) < 32 && checkDate[0].length() == 2) {
+                        if(Integer.parseInt(checkDate[1]) > 0 && Integer.parseInt(checkDate[1]) < 13 && checkDate[1].length() == 2) {
+                            if(Integer.parseInt(checkDate[2]) > 0 && Integer.parseInt(checkDate[2]) < 2023 && checkDate[2].length() == 4) {
                                 this.dateOfBirth = isDateOfBirth;
-                            } else whereIsMistake = "wrong value of year of birth - 'yyyy'";
-                        } else whereIsMistake = "Wrong value of month of birth - 'mm'";
-                    } else whereIsMistake = "Wrong value of birthday - 'dd'";
+                            } else whereIsMistake = "wrong value or format of year of birth - 'yyyy'";
+                        } else whereIsMistake = "Wrong value or format of month of birth - 'mm'";
+                    } else whereIsMistake = "Wrong value or format of birthday - 'dd'";
                 } else whereIsMistake = "String wasn't found satisfying condition dd.mm.yyyy";
             } catch (NumberFormatException ignored) {
             }
@@ -205,7 +205,7 @@ public class Data {
 
     /**
      * This method extract middle name from ArrayList relying on the logic that:
-     * women have 'vna' at the end of middle name AND 'hna' if middle name is 'Ili'inichna'
+     * women have 'vna' at the end of middle name AND 'hna' if middle name is 'Ili'inichna' or 'Nikitichna'
      * men have 'ich' at the of middle name
      */
     private void setMiddleName() {

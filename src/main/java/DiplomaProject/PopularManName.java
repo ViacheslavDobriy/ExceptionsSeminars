@@ -21,6 +21,7 @@ public enum PopularManName {
     NIKOLAY("Nikolay"),
     ALEXEY("Alexey"),
     ALEXANDR("Alexandr"),
+    ALEKSANDR("Aleksandr"),
     ALBERT("Albert"),
     ANATOLIY("Anatoliy"),
     ANTON("Anton"),
