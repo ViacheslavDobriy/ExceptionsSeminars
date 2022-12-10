@@ -33,7 +33,6 @@ public class WriterToFile {
     private void writeToFile() {
         File file = new File(this.path);
         try(FileWriter fw = new FileWriter(file)){
-            System.out.println("File is opened");
             fw.write(this.dataIsReady);
             System.out.println("data is written to new file: " + this.info.getSurname() + ".txt");
         } catch (IOException e) {
